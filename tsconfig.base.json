@@ -14,7 +14,13 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@study-nx/markdown": ["libs/markdown/src/index.ts"],
+      "@study-nx/shared/mdx-elements": [
+        "libs/shared/mdx-elements/src/index.ts"
+      ],
+      "@study-nx/shared/mdx-elements/*": ["libs/shared/mdx-elements/src/lib/*"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

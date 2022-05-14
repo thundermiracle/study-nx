@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "cli": "nx",
+  "$id": "new-article",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Title of your blog",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    },
+    "createdAt": {
+      "type": "string",
+      "description": "CreatedAt of your blog",
+      "$default": {
+        "$source": "argv",
+        "index": 1
+      }
+    }
+  },
+  "required": [
+    "title"
+  ]
+}
