@@ -19,7 +19,8 @@
       "@study-nx/shared/mdx-elements": [
         "libs/shared/mdx-elements/src/index.ts"
       ],
-      "@study-nx/shared/mdx-elements/*": ["libs/shared/mdx-elements/src/lib/*"]
+      "@study-nx/shared/mdx-elements/*": ["libs/shared/mdx-elements/src/lib/*"],
+      "@study-nx/shared/ui": ["libs/shared/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
