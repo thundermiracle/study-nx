@@ -1,13 +1,11 @@
-import { getGreeting } from '../support/app.po';
+describe('site title', () => {
+  it('should render title correctly', () => {
+    cy.visit('/articles/hello-world');
+    cy.get('h1').contains('Hello World');
+  });
 
-describe('site', () => {
-  beforeEach(() => cy.visit('/'));
-
-  it('should display welcome message', () => {
-    // Custom command example, see `../support/commands.ts` file
-    cy.login('my-email@something.com', 'myPassword');
-
-    // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Welcome site');
+  it('should render youtube', () => {
+    cy.visit('/articles/youtube-test');
+    cy.get('iframe').should('be.visible');
   });
 });
