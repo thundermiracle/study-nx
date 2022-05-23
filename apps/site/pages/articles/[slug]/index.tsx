@@ -1,5 +1,5 @@
 import { readdirSync } from 'fs';
-import { GetStaticPaths, GetStaticProps } from 'next';
+import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next';
 import path, { join } from 'path';
 import { ParsedUrlQuery } from 'querystring';
 import { MDXRemote } from 'next-mdx-remote';
@@ -15,7 +15,10 @@ const mdxElements = {
   a: dynamic(() => import('@study-nx/shared/mdx-elements/custom-link')),
 };
 
-export function Article({ data, html }) {
+export function Article({
+  data,
+  html,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <div>
       <article className="prose lg:prose-xl px-8">
